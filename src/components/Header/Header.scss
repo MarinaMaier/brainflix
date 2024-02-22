@@ -1,3 +1,6 @@
+@use "/src/styles/partials/typography" as *;
+@use "/src/styles/partials/global" as *;
+
 body {
     margin: 0;
 }
@@ -11,7 +14,7 @@ body {
     &__search {
          &__bar {
             width: 260px;
-            border: 1px solid #555;
+            border: 1px solid $mercury ;
             border-radius: 4px;
             display: block;
             padding: 9px 4px 9px 40px;
@@ -21,8 +24,9 @@ body {
     }
     &__image {
         &__man {
-            width: 40px;
-            height: 40px;
+            object-fit: cover;
+            width: 2.25rem;
+            height: 2.25rem;
             border-radius: 50%;
         }
     }

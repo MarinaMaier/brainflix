@@ -1,6 +1,6 @@
 import logo from '../../assets/logo/BrainFlix-logo.svg';
 import imgIcon from '../../assets/Images/Mohan-muruge.jpg';
-import './component.scss';
+import './Header.scss';
 const Header = () => {
     return (
         <header className="header">
