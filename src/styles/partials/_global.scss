@@ -66,6 +66,10 @@ $breakpoint-desktop: 1279px;
     line-height: $lh-main-td;
 }
 
+body {
+    margin: 0;
+}
+
 input {
     font-family: $secondary-font;
     @include subh-text-mb;
