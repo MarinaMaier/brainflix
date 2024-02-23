@@ -1,0 +1,27 @@
+@use "/src/styles/partials/typography" as *;
+@use "/src/styles/partials/global" as *;
+
+.hero {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $black;
+}
+
+@include tablet {
+    .hero{
+        background-color: $dark-black;
+        video {
+            width: 90%;
+            height: 350px;
+        }
+    }
+}
+@include desktop {
+    .hero{
+        video {
+            width: 70%;
+            height: 360px;
+        }
+    }
+}
