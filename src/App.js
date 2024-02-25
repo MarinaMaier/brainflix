@@ -36,6 +36,7 @@ function updateActiveVideo (clickedId) {
             activeVideo={activeVideo}
             updateActiveVideo={updateActiveVideo}
           />
+          
         </div>
       </div>
     </>
