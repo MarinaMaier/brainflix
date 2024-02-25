@@ -1,0 +1,87 @@
+@use "../../styles/partials/global" as *;
+
+.video-details {
+    padding: 24px 16px 0 16px;
+    &__title {
+        margin: 0;
+    }
+    &__divider--mb {
+        border: 1px solid $mercury;
+    }
+    &__divider {
+        border: 1px solid $mercury;
+    }
+    &__container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+    &__channel-details{
+        display: flex;
+        flex-direction: column;
+        width: 50%;
+    }
+    &__timestamp {
+        color: $silver;
+    }
+    &__views-likes-container {
+        width: 50%;
+    }
+    &__views-container {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+    }
+    &__views {
+        color: $silver;
+    }
+    &__likes-container {
+        display: flex;
+        flex-direction: row;
+        gap: 5px;
+    }
+    &__likes {
+        color: $silver;
+    }
+}
+@include tablet {
+    .video-details {
+        padding: 36px 42px 0 42px;
+        &__divider--mb {
+            display: none;
+        }
+        &__channel-details{
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+            width: 50%;
+        }
+        &__views-container {
+            display: flex;
+            flex-direction: row;
+            gap: 5px;
+        }
+        &__views-likes-container {
+            width: 50%;
+            display: flex;
+            gap: 2rem;
+            justify-content: flex-end;
+        }
+    }
+}
+@include desktop {
+    .video-details {
+        padding: 36px 0 0 140px;
+        &__views-likes-container {
+            width: 50%;
+            display: flex;
+            gap: 2rem;
+            justify-content: flex-end;
+            padding-right: 16px;
+        }
+        &__description {
+            padding-right: 16px;
+        }
+    }
+}
