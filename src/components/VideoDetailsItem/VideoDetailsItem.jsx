@@ -1,11 +1,7 @@
 import "./VideoDetailsItem.scss";
 
-function VideoDetailsItem({ video, isActive, updateActiveVideo }) {
+function VideoDetailsItem({ video, updateActiveVideo }) {
     let className = "video-details-item";
-    if (isActive) {
-        className += " video-details-item--selected";
-    }
-
     const handClick = () => {
         updateActiveVideo(video.id);
     }

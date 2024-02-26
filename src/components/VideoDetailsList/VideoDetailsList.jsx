@@ -7,16 +7,19 @@ function VideoDetailsList({ videos, activeVideo, updateActiveVideo }) {
         <aside className="video-details-list">
             <h2 className="video-details-list__header">NEXT VIDEOS</h2>
             <ul className="video-details-list__videos">
-                {videos.map((video) => {
-                    return (
-                        <VideoDetailsItem
-                            key={video.id}
-                            video={video}
-                            isActive={video.id === activeVideo.id}
-                            updateActiveVideo={updateActiveVideo}
-                        />
-                    )
-                })}
+                {
+                    videos
+                    .filter(video => video.id !== activeVideo.id)
+                    .map((video) => {
+                        return (
+                            <VideoDetailsItem
+                                key={video.id}
+                                video={video}
+                                updateActiveVideo={updateActiveVideo}
+                            />
+                        )
+                    })
+                }
             </ul>
         </aside>
     );

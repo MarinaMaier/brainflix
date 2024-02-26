@@ -41,7 +41,7 @@
             border-style: none;
             display: block;
             padding: 10px 4px 4px 7px;
-            background: transparent url('../../assets/Icons/add_comment.svg') no-repeat 13px center;
+            background: transparent url('../../assets/icons/add_comment.svg') no-repeat 13px center;
             background-size: 1.5rem;
             background-color: $blue;
             color: $white;
@@ -59,18 +59,18 @@
             align-items: flex-end;
             padding: 0;
             width: 100%;
+            gap: 50px;
         }
         &__container-desktop {
             width: 70%;
             padding-left: 30px;
         }
         &__comment-input {
-            width: 400px;
+            width: 105%;
             height: 20px;
         }
         &__btn {
             padding: 10px 0;
-            width: 30%;
             &__comment {
                 width: 150px;
                 background-size: 1rem;
@@ -84,5 +84,14 @@
 @include desktop {
     .comments {
         padding: 0 0 0 140px;
+        &__image {
+            &__avatar {
+                margin-top: 2.5rem;
+                margin-left: 12px;
+            }
+        }
+        &__container {
+            gap: 40px;
+        }
     }
 }

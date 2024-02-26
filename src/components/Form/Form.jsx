@@ -1,5 +1,5 @@
 import "./Form.scss";
-import image from "../../assets/Images/Mohan-muruge.jpg";
+import image from "../../assets/images/Mohan-muruge.jpg";
 
 const FormComments = () => {
     return (
@@ -25,8 +25,5 @@ const FormComments = () => {
         </section>
     )
 }
-
-       
-
 
 export default FormComments;
