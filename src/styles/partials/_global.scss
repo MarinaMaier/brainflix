@@ -100,3 +100,6 @@ p {
     font-family: $secondary-font;
     @include subh-text-mb;
 }
+p.comments-list__wrapper-details-comments__details__timestamp {
+    color: $silver;
+}

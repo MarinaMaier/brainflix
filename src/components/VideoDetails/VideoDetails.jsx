@@ -1,3 +1,4 @@
+import * as moment from "moment";
 import "./VideoDetails.scss";
 import viewsIcon from "../../assets/icons/views.svg";
 import likesIcon from "../../assets/icons/likes.svg";
@@ -12,7 +13,11 @@ function VideoDetails ({ video }){
         description
     } = video;
 
-    const newTimestamp = new Date(timestamp).toLocaleDateString();
+    //Dynamic Timestamp
+    const getCustomTime = (time) => {
+        var duration = moment.duration(new moment().diff(new moment(time)));
+        return `${duration.humanize()} ago`;
+      }
 
     return (
         <article className="video-details">
@@ -21,7 +26,7 @@ function VideoDetails ({ video }){
             <div className="video-details__container">
                 <div className="video-details__channel-details">
                     <h3 className="video-details__channel">By {channel}</h3>
-                    <p className="video-details__timestamp">{newTimestamp}</p>
+                    <p className="video-details__timestamp">{getCustomTime(timestamp)}</p>
                 </div>
                 <div className="video-details__views-likes-container">
                     <div className="video-details__views-container">
