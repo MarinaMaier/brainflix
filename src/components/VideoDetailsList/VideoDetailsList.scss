@@ -1,0 +1,23 @@
+@use "../../styles/partials/global.scss" as*;
+
+.video-details-list {
+    padding: 16px;
+    &__header {
+        color: $silver;
+    }
+    &__videos {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+    }
+}
+@include tablet {
+    .video-details-list {
+        padding: 10px 42px;
+    }
+}
+@include desktop {
+    .video-details-list {
+        padding: 20px;
+    }
+}

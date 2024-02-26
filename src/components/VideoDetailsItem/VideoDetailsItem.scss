@@ -1,0 +1,28 @@
+.video-details-item {
+    display: flex;
+    flex-direction: row;
+    margin: 10px 0;
+    width: 100%;
+    cursor: pointer;
+    &__image {
+        border-radius: 4px;
+        width: 150px;
+        height: 90px;
+        margin-bottom: 5px;
+    }
+    &__title-channel {
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+        width: 50%;
+        gap: 36px;
+    }
+    &__title {
+        margin: 0;
+        padding-left: 16px;
+    }
+    &__channel {
+        margin: 0;
+        padding-left: 16px;
+    }
+}

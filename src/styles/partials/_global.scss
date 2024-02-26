@@ -84,3 +84,22 @@ button {
         @include mainfont;
     }
 }
+h1 {
+    font-family: $primary-font;
+
+}
+h2 {
+    font-family: $primary-font;
+    @include subh-text-mb;
+}
+h3 {
+    font-family: $primary-font;
+    @include subh-text-mb;
+}
+p {
+    font-family: $secondary-font;
+    @include subh-text-mb;
+}
+p.comments-list__wrapper-details-comments__details__timestamp {
+    color: $silver;
+}

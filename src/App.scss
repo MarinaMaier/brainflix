@@ -1,0 +1,22 @@
+@use "./styles/partials/global.scss" as*;
+
+.divider {
+    display: none;
+}
+@include desktop {
+    .content__section {
+        display: flex;
+        width: 100%;
+    }
+    .divider {
+        border: 1px solid $mercury;
+        display: flex;
+        flex-direction: column;
+    }
+    .content__right-side {
+        width: 65%;
+    }
+    .content__left-side {
+        width: 35%;
+    }
+}
