@@ -1,7 +1,12 @@
 import logo from '../../assets/logo/BrainFlix-logo.svg';
 import avatar from '../../assets/images/Mohan-muruge.jpg';
 import './Header.scss';
+import { useNavigate } from 'react-router-dom';
 const Header = () => {
+    let navigate = useNavigate();
+        function handleClick() {
+            navigate ('/upload');
+        }
     return (
         <header className="header">
             <div className="header__logo">
@@ -19,7 +24,7 @@ const Header = () => {
                 </div>
              </div>    
             <div className="header__btn">
-                <button className="header__btn__upload">UPLOAD</button>
+                <button className="header__btn__upload" onClick={handleClick}>UPLOAD</button>
             </div>
         </header>
     );
