@@ -34,6 +34,7 @@
     &__btn {
         padding: 10px 0;
         &__upload {
+            text-decoration: none;
             width: 320px;
             height: 2.5rem;
             border-radius: 4px;
@@ -44,10 +45,14 @@
             background-size: 1.5rem;
             background-color: $blue;
             color: $white;
+            cursor: pointer;
         }
     }
     &__btn2 {
         display: none;
+    }
+    &__link {
+        text-decoration: none;
     }
 }
 
@@ -78,6 +83,7 @@
                 background-size: 1.5rem;
                 background-color: $blue;
                 color: $white;
+                cursor: pointer;
             }
         }
     }
