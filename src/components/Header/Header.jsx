@@ -7,7 +7,7 @@ const Header = () => {
     return (
         <header className="header">
             <div className="header__logo">
-            <Link to={`/home`}>   
+            <Link to={`/`}>   
                 <img src={logo} alt="logo" />
             </Link>     
             </div>
@@ -15,20 +15,15 @@ const Header = () => {
                 <div className="header__search">
                     <input className="header__search__bar" type="search" placeholder="Search" />
                 </div>
-                <div className="header__btn2">
+                <div className="header__btn">
                 <Link className="header__link"to={`/upload`}>
-                    <button className="header__btn2__upload2">UPLOAD</button>
+                    <button className="header__btn__upload">UPLOAD</button>
                 </Link>
                 </div>
                 <div className="header__image">
                     <img className="header__image__avatar" src={avatar} alt="man" />
                 </div>
              </div>    
-            <div className="header__btn">
-            <Link className="header__link" to={`/upload`}>
-                <button className="header__btn__upload">UPLOAD</button>
-            </Link>    
-            </div>
         </header>
     );
 };
