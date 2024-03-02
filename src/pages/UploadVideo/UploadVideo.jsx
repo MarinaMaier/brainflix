@@ -2,6 +2,8 @@ import image from "../../assets/images/Upload-video-preview.jpg";
 import "./UploadPage.scss";
 
 const UploadVideo = () => {
+
+
   return (
     <main className="upload-video">
       <hr className="upload-video__divider1" />
@@ -43,15 +45,13 @@ const UploadVideo = () => {
       </div>
       <hr className="upload-video__divider3" />
       <div className="upload-video__btn">
-        <button type="submit" className="upload-video__btn__publish-mb">
+        <button type="submit" className="upload-video__btn__publish">
           PUBLISH
         </button>
         <button type="submit" className="upload-video__btn__cancel">
           CANCEL
         </button>
-        <button type="submit" className="upload-video__btn__publish-td">
-          PUBLISH
-        </button>
+     
       </div>
     </main>
   );

@@ -45,6 +45,11 @@
             background-size: 1.5rem;
             background-color: $blue;
             color: $white;
+            cursor: pointer;
+            &:hover {
+                background-color: $dark-blue;
+                cursor: pointer;
+            }
         }
     }
     &__divider {

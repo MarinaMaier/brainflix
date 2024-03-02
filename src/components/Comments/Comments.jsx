@@ -1,39 +1,49 @@
 import React from "react";
 import "./Comments.scss";
-import * as moment from "moment";
+import { getCustomTime } from "../../utils/utils";
 
-function VideoComments ({ video }){
-    const {
-        comments
-    } = video;
+function VideoComments({ video }) {
+  if (
+    ! (video && video.comments && video.comments.length)
+   ) {
+    return <p>No comments available.</p>;
+  }
 
-    //Dynamic Timestamp
-    const getCustomTime = (time) => {
-      var duration = moment.duration(new moment().diff(new moment(time)));
-      return `${duration.humanize()} ago`
-    }
+  // Destructuring comments with default value of an empty array
+  const { comments } = video;
 
-    return (
-        <article className="comments-list">
-          {comments.map((comment) => (
-            <React.Fragment key={comment.id}>
-              <div className="comments-list__wrapper">
-                <div className="comments-list__avatar"></div>
-                <div className="comments-list__wrapper-details-comments">
-                    <div className="comments-list__wrapper-details-comments__details">
-                      <h3 className="comments-list__wrapper-details-comments__details__name">{comment.name}</h3>
-                      <p className="comments-list__wrapper-details-comments__details__timestamp">{getCustomTime(comment.timestamp)}</p>
-                    </div>
-                    <div className="comments-list__wrapper-details-commentst__comment">
-                      <p className="comments-list__wrapper-details-comments__comment__text">{comment.comment}</p>
-                    </div>
-                </div>
+  // Checking if comments is an array and is not empty
+  if (!comments.length) {
+    return <p>No comments available.</p>;
+  }
+
+  return (
+    <article className="comments-list">
+      {comments.map((comment) => (
+        <React.Fragment key={comment.id}>
+          <div className="comments-list__wrapper">
+            <div className="comments-list__avatar"></div>
+            <div className="comments-list__wrapper-details-comments">
+              <div className="comments-list__wrapper-details-comments__details">
+                <h3 className="comments-list__wrapper-details-comments__details__name">
+                  {comment.name}
+                </h3>
+                <p className="comments-list__wrapper-details-comments__details__timestamp">
+                  {getCustomTime(comment.timestamp)}
+                </p>
               </div>
-              <hr className="comments-list__divider" />
-            </React.Fragment>
-          ))}
-        </article>
-      );
+              <div className="comments-list__wrapper-details-commentst__comment">
+                <p className="comments-list__wrapper-details-comments__comment__text">
+                  {comment.comment}
+                </p>
+              </div>
+            </div>
+          </div>
+          <hr className="comments-list__divider" />
+        </React.Fragment>
+      ))}
+    </article>
+  );
 }
-  
-  export default VideoComments;
+
+export default VideoComments;
