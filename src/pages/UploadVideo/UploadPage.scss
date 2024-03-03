@@ -1,11 +1,12 @@
-@use "../../styles/partials/global" as*;
+@import "../../styles/styles.scss";
 
+/* Styles for mobile screen */
 .upload-video {
     &__divider1 {
-        border: 1px solid $mercury;
+        border: 0.063rem solid $mercury;
     }
     &__heading {
-        padding-left: 16px;
+        padding-left: 1rem;
     }
     &__divider2 {
         display: none;
@@ -13,44 +14,44 @@
     &__preview {
         &__items {
             &__heading {
-                padding-left: 16px;
+                padding-left: 1rem;
                 color: $silver;
             }
             &__img {
                 width: 100%;
-                height: 200px;
-                border-radius: 4px;
-                padding-left: 16px;
-                padding-right: 16px;
+                height: 12.5rem;
+                border-radius: 0.25rem;
+                padding-left: 1rem;
+                padding-right: 1rem;
             }
         }
         &__form {
             &__container {
-                padding: 0 16px;
+                padding: 0 1rem;
                 width: 100%;
                 &__heading {
                 color: $silver;
-                margin: 16px 0 0 0;
+                margin: 1rem 0 0 0;
                 }
                 &__title-input {
                     width: 100%;
-                    height: 40px;
+                    height: 2.5rem;
                     background-color: $alabaster;
-                    border-radius: 4px;
-                    border: 1px solid $mercury;
-                    padding: 9px 4px 9px 9px;
+                    border-radius: 0.25rem;
+                    border: 0.063rem solid $mercury;
+                    padding: 0.563rem 0.25rem 0.563rem 0.563rem;
                 }
                 &__title-input2 {
                     width: 100%;
-                    height: 100px;
+                    height: 6.25rem;
                     background-color: $alabaster;
-                    border-radius: 4px;
-                    border: 1px solid $mercury;
-                    padding: 9px 4px 9px 9px;
+                    border-radius: 0.25rem;
+                    border: 0.063rem solid $mercury;
+                    padding: 0.563rem 0.25rem 0.563rem 0.563rem;
                 }
                 #title-2 {
                     color: $black;
-                    padding-bottom: 60px;
+                    padding-bottom: 3.75rem;
                 }
             }
         
@@ -60,27 +61,27 @@
         display: none;
     }
     &__btn {
-        padding: 10px 16px;
+        padding: 0.625rem 1rem;
         width: 100%;
         &__publish {
-            margin-top: 20px;
+            margin-top: 1.25rem;
             width: 100%;
             height: 2.5rem;
-            border-radius: 4px;
+            border-radius: 0.25rem;
             border-style: none;
             display: block;
-            padding: 10px 4px 4px 7px;
-            background: transparent url('../../assets/icons/publish.svg') no-repeat 13px center;
+            padding: 0.625rem 0.25rem 0.25rem 0.438rem;
+            background: transparent url('../../assets/icons/publish.svg') no-repeat 0.813rem center;
             background-size: 1.5rem;
             background-color: $blue;
             color: $white;
             cursor: pointer;
         }
         &__cancel {
-            margin-top: 20px;
+            margin-top: 1.25rem;
             width: 100%;
             height: 2.5rem;
-            border-radius: 4px;
+            border-radius: 0.25rem;
             border-style: none;
             background-color: $white;
             color: $blue;
@@ -88,16 +89,17 @@
         }
     }
 }
+/* Styles for tablet screen */
 @include tablet {
     .upload-video {
         &__divider1 {
             margin: 0;
         }
         &__heading {
-            padding-left: 32px;
+            padding-left: 2rem;
         }
         &__divider2 {
-            border: 1px solid $mercury;
+            border: 0.063rem solid $mercury;
             display: flex;
             width: 92%;
         }
@@ -105,36 +107,36 @@
             &__items {
                 width: 100%;
                 &__heading {
-                    padding-left: 32px;
+                    padding-left: 2rem;
                 }
                 &__img {
                     width: 50%;
-                    padding-left: 32px;
+                    padding-left: 2rem;
                 }
             }
             &__form {
-                padding-bottom: 20px;
+                padding-bottom: 1.25rem;
                 &__container {
-                    padding: 0 32px;
+                    padding: 0 2rem;
                     width: 100%;
                 }
             }
         }
         &__divider3 {
             display: flex;
-            border: 1px solid $mercury;
+            border: 0.063rem solid $mercury;
             width: 92%;
         }
         &__btn {
-            padding: 10px 32px;
+            padding: 0.625rem 2rem;
             width: 100%;
             display: flex;
             flex-direction: row-reverse;
             &__cancel {
-                margin-top: 20px;
-                width: 150px;
+                margin-top: 1.25rem;
+                width: 9.375rem;
                 height: 2.5rem;
-                border-radius: 4px;
+                border-radius: 0.25rem;
                 border-style: none;
                 background-color: $white;
                 color: $blue;
@@ -142,14 +144,14 @@
             }
             &__publish {
                 display: none;
-                margin-top: 20px;
-                width: 150px;
+                margin-top: 1.25rem;
+                width: 9.375rem;
                 height: 2.5rem;
-                border-radius: 4px;
+                border-radius: 0.25rem;
                 border-style: none;
                 display: block;
-                padding: 10px 4px 4px 7px;
-                background: transparent url('../../assets/icons/publish.svg') no-repeat 13px center;
+                padding: 0.625rem 0.25rem 0.25rem 0.438rem;
+                background: transparent url('../../assets/icons/publish.svg') no-repeat 0.813rem center;
                 background-size: 1.5rem;
                 background-color: $blue;
                 color: $white;
@@ -158,6 +160,7 @@
         }
     }
 }
+/* Styles for desktop screen */
 @include desktop {
     .upload-video {
         width: 100%; 
@@ -166,10 +169,10 @@
             margin: 0;
         }
         &__heading {
-            padding-left: 32px;
+            padding-left: 2rem;
         }
         &__divider2 {
-            border: 1px solid $mercury;
+            border: 0.063rem solid $mercury;
             display: flex;
             width: 92%;
         }
@@ -178,13 +181,13 @@
             &__items {
                 width: 50%;
                 &__heading {
-                    padding-left: 32px;
-                    margin: 13px 0 5px 0;
+                    padding-left: 2rem;
+                    margin: 0.813rem 0 0.313rem 0;
                 }
                 &__img {
                     width: 100%;
-                    height: 170px;
-                    padding-left: 32px;
+                    height: 10.625rem;
+                    padding-left: 2rem;
                     object-fit: cover;
                 }
             }
@@ -197,7 +200,7 @@
         }
         &__divider3 {
             display: flex;
-            border: 1px solid $mercury;
+            border: 0.063rem solid $mercury;
             width: 92%;
         }
     }

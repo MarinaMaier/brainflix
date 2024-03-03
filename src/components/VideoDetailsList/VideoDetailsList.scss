@@ -1,7 +1,7 @@
-@use "../../styles/partials/global.scss" as*;
-
+@import "../../styles/styles.scss";
+/* Mobile screen */
 .video-details-list {
-    padding: 16px;
+    padding: 1rem;
     &__header {
         color: $silver;
     }
@@ -15,13 +15,15 @@
         color: black;
     }
 }
+/* Tablet screen */
 @include tablet {
     .video-details-list {
-        padding: 10px 42px;
+        padding: 0.625rem 2.625rem;
     }
 }
+/* Desktop screen */
 @include desktop {
     .video-details-list {
-        padding: 20px;
+        padding: 1.25rem;
     }
 }

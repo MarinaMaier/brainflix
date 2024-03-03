@@ -7,7 +7,7 @@ function ActiveHero ({ hero }){
     } = hero;
     return (
         <div className="hero">
-            <video className="hero__video" width="100%" height="240" controls poster={image}>
+            <video className="hero__video" width="100%" height="220" controls poster={image}>
                 <source src={video} type="video/mp4"/>
             </video>
         </div>
