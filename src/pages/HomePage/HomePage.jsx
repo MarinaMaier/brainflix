@@ -7,35 +7,34 @@ import { useState, useEffect } from "react";
 import { HomePageServices } from "../../utils/HomePage";
 import { useParams } from "react-router-dom";
 
-
 const HomePage = () => {
   const { videoId } = useParams();
-
   const [activeVideo, setActiveVideo] = useState([]);
   const [allVideos, setAllVideos] = useState([]);
 
   useEffect(() => {
-  /*     
-    Initializing the service class holding all backend calls for the home page.
-    We used a class to scope all our service calls because it's generally best 
-    to avoid using global variables as much as possible. This includes all data types, 
-    objects, and functions. One of the main reasons to avoid global properties is that 
-    they can be easily overwritten by other scripts, causing unexpected behavior.
-  */
-  const homePageServices = new HomePageServices();
+    /*     
+      Initializing the service class holding all backend calls for the home page.
+      We used a class to scope all our home service calls because it's generally best 
+      to avoid using global variables as much as possible. This includes all data types, 
+      objects, and functions.
+      One of the main reasons to avoid global properties is that 
+      they can be easily overwritten by other scripts, causing unexpected behavior.
+    */
+    const homePageServices = new HomePageServices();
 
-  const fetchVideos = async() => {
-    // Fetching all videos from backend
-    const allVideos = await homePageServices.fetchAllVideos();
-    // Determining which video to fetch based on avalibility of videoId
-    const id = videoId ? videoId : allVideos[0] && allVideos[0].id;
-    // Fetching full video json
-    const activeVideoDetails = await homePageServices.fetchVideoDetails(id);
-    // Updating respective states
-    setAllVideos(allVideos);
-    setActiveVideo(activeVideoDetails);
-  }
-  fetchVideos();
+    const fetchVideos = async() => {
+      // Fetching all videos from backend
+      const allVideos = await homePageServices.fetchAllVideos();
+      // Determining which video to fetch based on avalibility of videoId
+      const id = videoId ? videoId : allVideos[0] && allVideos[0].id;
+      // Fetching full video json
+      const activeVideoDetails = await homePageServices.fetchVideoDetails(id);
+      // Updating respective states
+      setAllVideos(allVideos);
+      setActiveVideo(activeVideoDetails);
+    }
+    fetchVideos();
   }, [videoId]);
 
   return (

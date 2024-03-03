@@ -3,16 +3,13 @@ import "./Comments.scss";
 import { getCustomTime } from "../../utils/utils";
 
 function VideoComments({ video }) {
-  if (
-    ! (video && video.comments && video.comments.length)
-   ) {
+  if (!(video && video.comments && video.comments.length)) {
     return <p>No comments available.</p>;
   }
 
-  // Destructuring comments with default value of an empty array
   const { comments } = video;
 
-  // Checking if comments is an array and is not empty
+  // Checking no comments scenario
   if (!comments.length) {
     return <p>No comments available.</p>;
   }
