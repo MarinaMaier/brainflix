@@ -1,9 +1,17 @@
 import image from "../../assets/images/Upload-video-preview.jpg";
 import "./UploadPage.scss";
+import { useState } from "react";
+import UploadPopUp from './UploadPopUp';
+import { Link } from "react-router-dom";
 
 const UploadVideo = () => {
 
-
+  const [uploadStatus, setUploadStatus] = useState(false);
+  
+  const handleClick = () => { 
+    // updating the state on successful upload
+    setUploadStatus(true);
+  }
   return (
     <main className="upload-video">
       <hr className="upload-video__divider1" />
@@ -45,13 +53,17 @@ const UploadVideo = () => {
       </div>
       <hr className="upload-video__divider3" />
       <div className="upload-video__btn">
-        <button type="submit" className="upload-video__btn__publish">
+        <button onClick={handleClick} type="submit" className="upload-video__btn__publish">
           PUBLISH
-        </button>
-        <button type="submit" className="upload-video__btn__cancel">
-          CANCEL
-        </button>
-     
+        </button> 
+        <Link to={"/"}>
+           <button type="submit" className="upload-video__btn__cancel">
+            CANCEL
+          </button>
+        </Link>
+      </div>
+      <div className="upload__popup">
+        { uploadStatus && <UploadPopUp />}
       </div>
     </main>
   );

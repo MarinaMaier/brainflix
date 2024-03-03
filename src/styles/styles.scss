@@ -1,0 +1,46 @@
+@import "./partials/variables.scss";
+@import "./partials/mixins";
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+body {
+    margin: 0;
+}
+input {
+    font-family: 'Avenir Regular';  
+    font-size: $subheader-mb;
+    line-height: $lh-primary;  
+}
+button {
+    font-family: $primary-font;
+    font-size: $text-mb;
+    line-height: $lh-secondary;
+    @include tablet {
+        @include mainfont;
+    }
+    @include desktop {
+        @include mainfont;
+    }
+}
+h1 {
+    font-family: $primary-font;
+}
+h2 {
+    font-family: $primary-font;
+    font-size: $subheader-mb;
+    line-height: $lh-primary;
+}
+h3 {
+    font-family: $primary-font;
+    font-size: $subheader-mb;
+    line-height: $lh-primary;
+}
+p {
+    font-family: $secondary-font;
+    font-size: $subheader-mb;
+    line-height: $lh-primary;
+}
+p.comments-list__wrapper-details-comments__details__timestamp {
+    color: $silver;
+}

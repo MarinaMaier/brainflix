@@ -17,8 +17,10 @@ const HomePage = () => {
   useEffect(() => {
   /*     
     Initializing the service class holding all backend calls for the home page.
-    We used a class to scope all our service calls because it's generally best to avoid using global variables as much as possible. This includes all data types, objects, and functions.
-    One of the main reasons to avoid global properties is that they can be easily overwritten by other scripts, causing unexpected behavior.
+    We used a class to scope all our service calls because it's generally best 
+    to avoid using global variables as much as possible. This includes all data types, 
+    objects, and functions. One of the main reasons to avoid global properties is that 
+    they can be easily overwritten by other scripts, causing unexpected behavior.
   */
   const homePageServices = new HomePageServices();
 

@@ -13,7 +13,7 @@ const Header = () => {
             </div>
             <div className="header__wrapper">
                 <div className="header__search">
-                    <input className="header__search__bar" type="search" placeholder="Search" />
+                    <input className="header__search__bar" id="search" type="search" placeholder="Search" />
                 </div>
                 <div className="header__btn">
                 <Link className="header__link"to={`/upload`}>

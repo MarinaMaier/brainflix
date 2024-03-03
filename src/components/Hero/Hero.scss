@@ -1,27 +1,27 @@
-@use "/src/styles/partials/typography" as *;
-@use "/src/styles/partials/global" as *;
-
+@import "../../styles/styles.scss";
+/* Mobile screen */
 .hero {
     display: flex;
     justify-content: center;
     align-items: center;
     background-color: $black;
 }
-
+/* Tablet screen */
 @include tablet {
     .hero{
         background-color: $dark-black;
         video {
             width: 90%;
-            height: 370px;
+            height: 23.125rem;
         }
     }
 }
+ /* Desktop screen */
 @include desktop {
     .hero{
         video {
             width: 70%;
-            height: 400px;
+            height: 25rem;
         }
     }
 }

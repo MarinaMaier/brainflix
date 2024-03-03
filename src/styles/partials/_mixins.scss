@@ -1,0 +1,19 @@
+@use './variables.scss';
+
+@mixin tablet {
+    @media (min-width: $breakpoint-tablet){
+        @content;
+    }
+}
+@mixin desktop {
+    @media (min-width: $breakpoint-desktop){
+        @content;
+    }
+}
+@mixin mainfont {
+    font-family: $primary-font;
+    font-size: $main-font-size;
+    line-height: $lh-secondary;
+}
+
+
