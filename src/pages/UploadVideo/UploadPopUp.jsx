@@ -2,7 +2,6 @@ import { Link } from "react-router-dom";
 import "./UploadPopUp.scss";
 
 const UploadPopUp = () => {
-    console.log("UploadPopUp rendered");
   return (
     <>
       <div className="popup">

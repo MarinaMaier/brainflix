@@ -2,14 +2,14 @@ import logo from '../../assets/logo/BrainFlix-logo.svg';
 import avatar from '../../assets/images/Mohan-muruge.jpg';
 import './Header.scss';
 import { Link } from 'react-router-dom';
-const Header = () => {
 
+const Header = () => {
     return (
         <header className="header">
             <div className="header__logo">
             <Link to={`/`}>   
                 <img src={logo} alt="logo" />
-            </Link>     
+            </Link>
             </div>
             <div className="header__wrapper">
                 <div className="header__search">

@@ -5,9 +5,7 @@ import UploadPopUp from './UploadPopUp';
 import { Link } from "react-router-dom";
 
 const UploadVideo = () => {
-
   const [uploadStatus, setUploadStatus] = useState(false);
-  
   const handleClick = () => { 
     // updating the state on successful upload
     setUploadStatus(true);

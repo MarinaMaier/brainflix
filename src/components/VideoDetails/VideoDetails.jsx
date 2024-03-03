@@ -4,10 +4,6 @@ import viewsIcon from "../../assets/icons/views.svg";
 import likesIcon from "../../assets/icons/likes.svg";
 
 function VideoDetails ({ video }){
-    if (!video) {
-        return <div>Loading...</div>;
-    }
-    
     const {
         title,
         channel,
@@ -17,6 +13,9 @@ function VideoDetails ({ video }){
         description
     } = video;
 
+    if (!video) {
+        return <div>Loading...</div>;
+    }
     return (
         <article className="video-details">
             <h1 className="video-details__title">{title}</h1>
