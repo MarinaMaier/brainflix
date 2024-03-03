@@ -1,4 +1,4 @@
-@use "./styles/partials/global.scss" as*;
+@import "./styles/styles.scss";
 
 .divider {
     display: none;
@@ -9,7 +9,7 @@
         width: 100%;
     }
     .divider {
-        border: 1px solid $mercury;
+        border: 0.063rem solid $mercury;
         display: flex;
         flex-direction: column;
     }

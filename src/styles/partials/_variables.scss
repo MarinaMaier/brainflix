@@ -1,0 +1,25 @@
+@use "./typography";
+
+$primary-font: 'Avenir Bold';
+$secondary-font: 'Avenir Regular';
+$main-font-size: 0.75rem;
+$pageheader-mb: 1.5rem;
+$pageheader-td: 2.063rem;
+$subheader-mb: 0.813rem;
+$subheader-td: 0.875rem;
+$text-mb: 0.625rem;
+$lh-primary: 1.125rem;
+$lh-pageheader-mb: 2rem;
+$lh-secondary: 1.25rem;
+$lh-main-td: 1.375rem;
+$lh-pageheader-td: 2.75rem;
+$black: #323232;
+$blue: #0095FF;
+$silver: #AFAFAF;
+$white: #FFFFFF;
+$dark-black: #000000;
+$dark-blue: #0065AD;
+$mercury: #E1E1E1;
+$alabaster: #FAFAFA;
+$breakpoint-tablet: 768px;
+$breakpoint-desktop: 1279px;

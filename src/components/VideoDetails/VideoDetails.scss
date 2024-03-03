@@ -1,15 +1,16 @@
-@use "../../styles/partials/global" as *;
+@import "../../styles/styles.scss";
 
+/* Mobile screen */
 .video-details {
-    padding: 24px 16px 0 16px;
+    padding: 1.5rem 1rem 0 1rem;
     &__title {
         margin: 0;
     }
     &__divider--mb {
-        border: 1px solid $mercury;
+        border: 0.063rem solid $mercury;
     }
     &__divider {
-        border: 1px solid $mercury;
+        border: 0.063rem solid $mercury;
     }
     &__container {
         display: flex;
@@ -31,7 +32,7 @@
     &__views-container {
         display: flex;
         flex-direction: row;
-        gap: 5px;
+        gap: 0.313rem;
     }
     &__views {
         color: $silver;
@@ -39,15 +40,16 @@
     &__likes-container {
         display: flex;
         flex-direction: row;
-        gap: 5px;
+        gap: 0.313rem;
     }
     &__likes {
         color: $silver;
     }
 }
+/* Tablet screen */
 @include tablet {
     .video-details {
-        padding: 36px 42px 0 42px;
+        padding: 2.25rem 2.625rem 0 2.625rem;
         &__divider--mb {
             display: none;
         }
@@ -60,7 +62,7 @@
         &__views-container {
             display: flex;
             flex-direction: row;
-            gap: 5px;
+            gap: 0.313rem;
         }
         &__views-likes-container {
             width: 50%;
@@ -70,18 +72,19 @@
         }
     }
 }
+/* Desktop screen */
 @include desktop {
     .video-details {
-        padding: 36px 0 0 140px;
+        padding: 2.25rem 0 0 8.75rem;
         &__views-likes-container {
             width: 50%;
             display: flex;
             gap: 2rem;
             justify-content: flex-end;
-            padding-right: 16px;
+            padding-right: 1rem;
         }
         &__description {
-            padding-right: 16px;
+            padding-right: 1rem;
         }
     }
 }
