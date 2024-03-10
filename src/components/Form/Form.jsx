@@ -1,10 +1,12 @@
 import "./Form.scss";
 import image from "../../assets/images/Mohan-muruge.jpg";
 
-const FormComments = () => {
+const FormComments = ({ video }) => {
+    const { comments } = video;
+
     return (
         <section className="comments">
-            <h3 className="comments__heading">3 Comments</h3>
+            <h3 className="comments__heading">{comments && comments.length} Comments</h3>
             <form className="comments__wrapper">
                 <div className="comments__image">
                     <img className="comments__image__avatar" src={image} alt="Mohan-muruge" />

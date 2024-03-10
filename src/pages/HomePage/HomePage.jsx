@@ -43,7 +43,7 @@ const HomePage = () => {
       <div className="content__section">
         <div className="content__right-side">
           <VideoDetails video={activeVideo} />
-          <FormComments />
+          <FormComments video={activeVideo}/>
           <VideoComments video={activeVideo} />
         </div>
         <hr className="divider" />
