@@ -128,7 +128,7 @@
         &__divider3 {
             display: flex;
             border: 0.063rem solid $mercury;
-            width: 92%;
+            width: 100%;
         }
         &__btn {
             padding: 0.625rem 2rem;
@@ -177,7 +177,7 @@
         &__divider2 {
             border: 0.063rem solid $mercury;
             display: flex;
-            width: 92%;
+            width: 96%;
         }
         &__preview {
             display: flex;
@@ -204,7 +204,10 @@
         &__divider3 {
             display: flex;
             border: 0.063rem solid $mercury;
-            width: 92%;
+            width: 81%;
+            position: absolute;
+            left: 8rem;
+            margin: 1rem 0 1rem 0;
         }
     }
 }
