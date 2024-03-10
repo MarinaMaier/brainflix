@@ -1,11 +1,11 @@
-import { ApiKey, ApiUrl } from "./Api";
+import { ApiUrl } from "./Api";
 import axios from "axios";
 
 export class HomePageServices {
 
     async fetchAllVideos() {
         try {
-            const response = await axios.get(`${ApiUrl}videos/?api_key=${ApiKey}`)
+            const response = await axios.get(`${ApiUrl}videos`)
             return response.data;
           } catch (error){
             console.error("This is your error", error);
@@ -15,7 +15,7 @@ export class HomePageServices {
 
     async fetchVideoDetails(id) {
         try {
-            const response = await axios.get(`${ApiUrl}videos/${id}?api_key=${ApiKey}`)
+            const response = await axios.get(`${ApiUrl}videos/${id}`)
             return response.data;
         } catch (error){
             console.error("This is your error", error);
