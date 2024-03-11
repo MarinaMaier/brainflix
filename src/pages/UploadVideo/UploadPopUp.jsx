@@ -14,6 +14,6 @@ const UploadPopUp = () => {
       </div>
     </>
   );
-}
+};
 
 export default UploadPopUp;

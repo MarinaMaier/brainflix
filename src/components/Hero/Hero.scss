@@ -2,27 +2,27 @@
 
 /* Mobile screen */
 .hero {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: $black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $black;
 }
 /* Tablet screen */
 @include tablet {
-    .hero{
-        background-color: $dark-black;
-        video {
-            width: 90%;
-            height: 23.125rem;
-        }
+  .hero {
+    background-color: $dark-black;
+    video {
+      width: 90%;
+      height: 23.125rem;
     }
+  }
 }
- /* Desktop screen */
+/* Desktop screen */
 @include desktop {
-    .hero{
-        video {
-            width: 70%;
-            height: 25rem;
-        }
+  .hero {
+    video {
+      width: 70%;
+      height: 25rem;
     }
+  }
 }

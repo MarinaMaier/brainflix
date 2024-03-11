@@ -22,17 +22,13 @@ function VideoComments({ video }) {
             <div className="comments-list__avatar"></div>
             <div className="comments-list__wrapper-details-comments">
               <div className="comments-list__details">
-                <h3 className="comments-list__name">
-                  {comment.name}
-                </h3>
+                <h3 className="comments-list__name">{comment.name}</h3>
                 <p className="comments-list__timestamp">
                   {getCustomTime(comment.timestamp)}
                 </p>
               </div>
               <div className="comments-list__comment">
-                <p className="comments-list__text">
-                  {comment.comment}
-                </p>
+                <p className="comments-list__text">{comment.comment}</p>
               </div>
             </div>
           </div>
