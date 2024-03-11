@@ -2,29 +2,29 @@
 
 /* Mobile screen */
 .video-details-list {
-    padding: 1rem;
-    &__header {
-        color: $silver;
-    }
-    &__videos {
-        margin: 0;
-        padding: 0;
-        list-style: none;
-    }
-    &__link {
-        text-decoration: none;
-        color: black;
-    }
+  padding: 1rem;
+  &__header {
+    color: $silver;
+  }
+  &__videos {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  &__link {
+    text-decoration: none;
+    color: black;
+  }
 }
 /* Tablet screen */
 @include tablet {
-    .video-details-list {
-        padding: 0.625rem 2.625rem;
-    }
+  .video-details-list {
+    padding: 0.625rem 2.625rem;
+  }
 }
 /* Desktop screen */
 @include desktop {
-    .video-details-list {
-        padding: 1.25rem;
-    }
+  .video-details-list {
+    padding: 1.25rem;
+  }
 }

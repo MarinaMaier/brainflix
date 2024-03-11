@@ -2,22 +2,21 @@ import image from "../../assets/images/Upload-video-preview.jpg";
 import "./UploadPage.scss";
 import { useState } from "react";
 import axios from "axios";
-import UploadPopUp from './UploadPopUp';
+import UploadPopUp from "./UploadPopUp";
 import { Link } from "react-router-dom";
 import { ApiUrl } from "../../utils/Api.js";
 
 const UploadVideo = () => {
   const [uploadStatus, setUploadStatus] = useState(false);
 
-  const handleSubmit = async (e) => { 
-    e.preventDefault();
+  const handleSubmit = async (event) => {
+    event.preventDefault();
     try {
-      const response = await axios.post(`${ApiUrl}videos/upload`, {
-        title: e.target.title.value,
-        description: e.target.description.value,
-        image: '../public/images/Upload-video-preview.jpg'
+      await axios.post(`${ApiUrl}videos/upload`, {
+        title: event.target.title.value || event.target.title.placeholder,description:
+          event.target.description.value || event.target.description.placeholder,
+        image: "http://localhost:5001/images/Upload-video-preview.jpg",
       });
-      console.log(response)
       setUploadStatus(true);
     } catch (error) {
       console.error("This is your error: ", error);
@@ -32,16 +31,10 @@ const UploadVideo = () => {
       <div className="upload-video__preview">
         <div className="upload-video__wrapper">
           <h3 className="upload-video__heading">VIDEO THUMBNAIL</h3>
-          <img
-            className="upload-video__img"
-            src={image}
-            alt="upload video"
-          />
-        </div> 
+          <img className="upload-video__img" src={image} alt="upload video" />
+        </div>
         <form className="upload-video__form" onSubmit={handleSubmit}>
-          <h3 className="upload-video__form-heading">
-            TITLE YOUR VIDEO
-          </h3>
+          <h3 className="upload-video__form-heading">TITLE YOUR VIDEO</h3>
           <input
             placeholder="Add a title to your video"
             className="upload-video__title"
@@ -54,7 +47,7 @@ const UploadVideo = () => {
           </h3>
           <input
             placeholder="Add a description to your video"
-            className="upload-video__description" 
+            className="upload-video__description"
             id="title-2"
             type="text"
             name="description"
@@ -63,18 +56,14 @@ const UploadVideo = () => {
           <div className="upload-video__btn">
             <button type="submit" className="upload-video__publish">
               PUBLISH
-            </button> 
+            </button>
             <Link to={"/"}>
-              <button className="upload-video__cancel">
-                CANCEL
-              </button>
+              <button className="upload-video__cancel">CANCEL</button>
             </Link>
           </div>
         </form>
       </div>
-      <div className="upload__popup">
-        { uploadStatus && <UploadPopUp />}
-      </div>
+      <div className="upload__popup">{uploadStatus && <UploadPopUp />}</div>
     </main>
   );
 };
