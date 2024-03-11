@@ -12,13 +12,13 @@ const Header = () => {
             </Link>
             </div>
             <div className="header__wrapper">
-                    <input className="header__bar" id="search" type="search" placeholder="Search" />
+                <input className="header__bar" id="search" type="search" placeholder="Search" />
                 <div className="header__btn">
-                <Link className="header__link"to={`/upload`}>
-                    <button className="header__btn__upload">UPLOAD</button>
-                </Link>
+                    <Link className="header__link"to={`/upload`}>
+                        <button className="header__btn__upload">UPLOAD</button>
+                    </Link>
                 </div>
-                    <img className="header__avatar" src={avatar} alt="man" />
+                <img className="header__avatar" src={avatar} alt="man" />
              </div>    
         </header>
     );
