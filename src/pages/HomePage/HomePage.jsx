@@ -23,7 +23,7 @@ const HomePage = () => {
     */
     const homePageServices = new HomePageServices();
 
-    const fetchVideos = async() => {
+    const fetchVideos = async () => {
       // Fetching all videos from backend
       const allVideos = await homePageServices.fetchAllVideos();
       // Determining which video to fetch based on avalibility of videoId
@@ -33,7 +33,7 @@ const HomePage = () => {
       // Updating respective states
       setAllVideos(allVideos);
       setActiveVideo(activeVideoDetails);
-    }
+    };
     fetchVideos();
   }, [videoId]);
 
@@ -43,15 +43,12 @@ const HomePage = () => {
       <div className="content__section">
         <div className="content__right-side">
           <VideoDetails video={activeVideo} />
-          <FormComments />
+          <FormComments video={activeVideo} />
           <VideoComments video={activeVideo} />
         </div>
         <hr className="divider" />
         <div className="content__left-side">
-          <VideoDetailsList
-            videos={allVideos}
-            activeVideo={activeVideo}
-          />
+          <VideoDetailsList videos={allVideos} activeVideo={activeVideo} />
         </div>
       </div>
     </>

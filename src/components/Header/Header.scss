@@ -2,92 +2,86 @@
 
 /* Mobile screen */
 .header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 1rem;
+  &__wrapper {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 1rem 0;
-    width: 360px;
-    margin: 0 auto;
-    &__wrapper {
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        padding: 0.625rem 0;
+    flex-direction: row;
+    flex-flow: wrap;
+    justify-content: center;
+  }
+  &__bar {
+    width: 16.5625rem;
+    border: 0.0625rem solid $mercury;
+    border-radius: 0.25rem;
+    display: block;
+    padding: 0.5625rem 0.25rem 0.5625rem 2.5rem;
+    background: transparent url("../../assets/icons/search.svg") no-repeat 13px
+      center;
+    background-size: 1rem;
+  }
+  &__avatar {
+    object-fit: cover;
+    width: 2.25rem;
+    height: 2.25rem;
+    border-radius: 50%;
+    margin-left: 1rem;
+  }
+  &__btn {
+    order: 2;
+    padding: 0.625rem 0;
+    &__upload {
+      width: 20rem;
+      height: 2.5rem;
+      border-radius: 0.25rem;
+      border-style: none;
+      display: block;
+      padding: 0.625rem 0.25rem 0.25rem 0.4375rem;
+      background: transparent url("../../assets/icons/upload.svg") no-repeat
+        13px center;
+      background-size: 1.5rem;
+      background-color: $blue;
+      color: $white;
+      cursor: pointer;
     }
-    &__search {
-         &__bar {
-            width: 16.5625rem;
-            border: 0.0625rem solid $mercury ;
-            border-radius: 0.25rem;
-            display: block;
-            padding: 0.5625rem 0.25rem 0.5625rem 2.5rem;
-            background: transparent url('../../assets/icons/search.svg') no-repeat 13px center;
-            background-size: 1rem;
-        }
-    }
-    &__image { 
-        &__avatar {
-            object-fit: cover;
-            width: 2.25rem;
-            height: 2.25rem;
-            border-radius: 50%;
-            margin-left: 1rem;
-        }
-    }
-    &__btn {
-        order: 3;
-        padding: 0.625rem 0;
-        &__upload {
-            text-decoration: none;
-            width: 20rem;
-            height: 2.5rem;
-            border-radius: 0.25rem;
-            border-style: none;
-            display: block;
-            padding: 0.625rem 0.25rem 0.25rem 0.4375rem;
-            background: transparent url('../../assets/icons/upload.svg') no-repeat 13px center;
-            background-size: 1.5rem;
-            background-color: $blue;
-            color: $white;
-            cursor: pointer;
-        }
-    }
-    &__link {
-        text-decoration: none;
-    }
+  }
+  &__link {
+    text-decoration: none;
+  }
 }
 /* Tablet screen */
 @include tablet {
-    .header {
-        width: 100%;
-        margin: 0;
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 1rem 2rem;
-        &__wrapper {
-            gap: 1.25rem;
-            padding: 0.625rem 0;
-            align-items: center;
-        &__search {
-            order: 1;
-        }
-        }
-        &__image {
-            order: 3;
-        }
-        &__btn {
-            align-items: center;
-            order: 2;
-           &__upload {
-            width: 9.375rem;
-           }
-        }
+  .header {
+    width: 100%;
+    margin: 0;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    &__wrapper {
+      gap: 1.25rem;
+      padding: 0.625rem 1rem;
+      align-items: center;
     }
+    &__bar {
+      order: 1;
+    }
+    &__avatar {
+      order: 3;
+    }
+    &__btn {
+      align-items: center;
+      order: 2;
+      &__upload {
+        width: 9.375rem;
+      }
+    }
+  }
 }
 /* Desktop screen */
 @include desktop {
-    .header{
-        padding: 1rem 6rem;
-    }
+  .header {
+    padding: 1rem 6rem;
+  }
 }
